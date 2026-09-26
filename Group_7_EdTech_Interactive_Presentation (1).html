@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Group 7 – EdTech Tools Comparison</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(135deg,#111827,#1e3a8a 55%,#0f766e);color:#fff;min-height:100vh}
+.app{min-height:100vh;padding:28px 42px}
+header{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:22px}
+.badge{background:#facc15;color:#111827;font-weight:900;padding:9px 18px;border-radius:30px;font-size:18px}
+h1{font-size:42px;margin:0;text-align:center;flex:1}
+.sub{font-size:18px;text-align:center;opacity:.9;margin:4px 0 20px}
+.controls{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+button{border:0;border-radius:12px;padding:12px 18px;font-weight:800;cursor:pointer;background:#fff;color:#172554}
+button:hover{transform:translateY(-1px)}
+button.active{background:#facc15}
+.panel{display:none;background:rgba(255,255,255,.97);color:#111827;border-radius:24px;padding:28px;box-shadow:0 20px 60px rgba(0,0,0,.3);min-height:600px}
+.panel.active{display:block}
+.hero{text-align:center;padding:30px}
+.hero h2{font-size:38px;margin:10px}
+.hero p{font-size:21px;line-height:1.5;max-width:950px;margin:15px auto}
+.criteria{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:28px}
+.card{background:#eef2ff;border-radius:16px;padding:17px;color:#172554}
+.card b{display:block;font-size:17px;margin-bottom:7px}
+.tool-head{display:flex;justify-content:space-between;align-items:center;border-bottom:3px solid #dbeafe;padding-bottom:15px;margin-bottom:18px}
+.tool-head h2{font-size:34px;margin:0}
+.tool-tag{padding:8px 13px;border-radius:20px;background:#dbeafe;color:#1e3a8a;font-weight:800}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.item{border-left:6px solid #2563eb;background:#f8fafc;padding:14px 17px;border-radius:12px}
+.item strong{display:block;color:#1e3a8a;margin-bottom:5px}
+.compare{overflow:auto}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{padding:12px;border:1px solid #cbd5e1;text-align:left;vertical-align:top}
+th{background:#172554;color:white}
+tr:nth-child(even){background:#f8fafc}
+.final{background:linear-gradient(135deg,#fef3c7,#ecfccb);border-radius:20px;padding:28px;color:#172554}
+.final h2{font-size:34px;margin-top:0}
+.final p{font-size:20px;line-height:1.6}
+.quote{font-style:italic;border-left:6px solid #eab308;padding-left:18px}
+footer{text-align:center;margin-top:18px;font-size:14px;opacity:.8}
+@media(max-width:900px){.criteria{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}h1{font-size:30px}.app{padding:18px}.panel{padding:18px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+<div class="badge">GROUP 7</div>
+<h1>EDTECH TOOLS COMPARISON</h1>
+<button onclick="document.documentElement.requestFullscreen()">⛶ FULL SCREEN</button>
+</header>
+<div class="sub">English Teaching • Interactive Group Presentation</div>
+
+<div class="controls">
+<button class="active" onclick="show('home',this)">🏠 Introduction</button>
+<button onclick="show('wordwall',this)">🟣 Wordwall</button>
+<button onclick="show('kahoot',this)">🟢 Kahoot!</button>
+<button onclick="show('live',this)">🔵 Liveworksheets</button>
+<button onclick="show('snorkl',this)">🟠 Snorkl</button>
+<button onclick="show('wayground',this)">🔴 Wayground</button>
+<button onclick="show('compare',this)">📊 Compare</button>
+<button onclick="show('final',this)">⭐ Final Choice</button>
+</div>
+
+<section id="home" class="panel active">
+<div class="hero">
+<h2>Five tools, one comparison</h2>
+<p>Our presentation compares <b>Wordwall, Kahoot!, Liveworksheets, Snorkl and Wayground</b> using exactly the same criteria from the assignment.</p>
+<div class="criteria">
+<div class="card"><b>1. Platform / OS</b>Where can we use it?</div>
+<div class="card"><b>2. Collaboration</b>Can students participate together?</div>
+<div class="card"><b>3. Teacher Friendly</b>How easy is it to use?</div>
+<div class="card"><b>4. Results</b>Can teachers monitor students?</div>
+<div class="card"><b>5. Cost</b>Free access and paid limits</div>
+<div class="card"><b>6. Target Group</b>Level and age</div>
+<div class="card"><b>7. Skills</b>What can students develop?</div>
+<div class="card"><b>8. Registration</b>Teacher and student access</div>
+<div class="card"><b>9. Free Limitations</b>What is restricted?</div>
+<div class="card"><b>10. Interesting Feature</b>What makes it stand out?</div>
+</div>
+<p style="margin-top:30px"><b>Group 7</b> — Let's compare!</p>
+</div>
+</section>
+
+<section id="wordwall" class="panel">
+<div class="tool-head"><h2>🟣 Wordwall</h2><span class="tool-tag">Interactive & Flexible</span></div>
+<div class="grid">
+<div class="item"><strong>Platform / Operating System</strong>Web-based; works in modern browsers on computers, tablets and phones.</div>
+<div class="item"><strong>Supports collaboration</strong>Students can participate individually, in teacher-led activities or through assignments.</div>
+<div class="item"><strong>Teacher Friendly</strong>Very accessible: templates, editing tools and ready-made activities make preparation easier.</div>
+<div class="item"><strong>Monitor student results</strong>Teachers can use assignments to collect and review student results.</div>
+<div class="item"><strong>Cost</strong>Free access is available; additional templates and features depend on the plan.</div>
+<div class="item"><strong>Target Group</strong>School learners and language learners across different ages and levels.</div>
+<div class="item"><strong>Skills developed</strong>Vocabulary, spelling, matching, recall, sentence practice and some speaking activities.</div>
+<div class="item"><strong>Registration Required</strong>Teacher: Yes. Students: usually can access activities/assignments through a link or code.</div>
+<div class="item"><strong>Limitations on Free Plans</strong>Free accounts have limits on templates/resources; exact limits can change.</div>
+<div class="item"><strong>Interesting Feature</strong>One activity can be transformed into another template, making the same content reusable.</div>
+</div>
+</section>
+
+<section id="kahoot" class="panel">
+<div class="tool-head"><h2>🟢 Kahoot!</h2><span class="tool-tag">Live Game-Based Learning</span></div>
+<div class="grid">
+<div class="item"><strong>Platform / Operating System</strong>Web-based with mobile participation options.</div>
+<div class="item"><strong>Supports collaboration</strong>Excellent for live participation, team play and classroom competitions.</div>
+<div class="item"><strong>Teacher Friendly</strong>Quiz creation and live game workflow are designed for classroom use.</div>
+<div class="item"><strong>Monitor student results</strong>Reports can help teachers review participation and performance.</div>
+<div class="item"><strong>Cost</strong>Free participation is available; teacher features and limits vary by plan.</div>
+<div class="item"><strong>Target Group</strong>School students, language learners and other educational/training groups.</div>
+<div class="item"><strong>Skills developed</strong>Recall, accuracy, vocabulary, comprehension and quick decision-making.</div>
+<div class="item"><strong>Registration Required</strong>Teacher: Yes for creating/hosting. Students can normally join a session with a game PIN.</div>
+<div class="item"><strong>Limitations on Free Plans</strong>Limits may apply to question types, reports, features or session options.</div>
+<div class="item"><strong>Interesting Feature</strong>Real-time game experience with points, rankings and immediate feedback.</div>
+</div>
+</section>
+
+<section id="live" class="panel">
+<div class="tool-head"><h2>🔵 Liveworksheets</h2><span class="tool-tag">Interactive Worksheets</span></div>
+<div class="grid">
+<div class="item"><strong>Platform / Operating System</strong>Web-based and accessible through a browser.</div>
+<div class="item"><strong>Supports collaboration</strong>Best suited to individual or assigned practice; can be used within classroom workflows.</div>
+<div class="item"><strong>Teacher Friendly</strong>Teachers can create or use interactive worksheets and assign them to learners.</div>
+<div class="item"><strong>Monitor student results</strong>Student submissions and feedback can be reviewed through the platform.</div>
+<div class="item"><strong>Cost</strong>Free access is available; teacher accounts and features have plan-dependent limits.</div>
+<div class="item"><strong>Target Group</strong>School and language learners, with activities adaptable to different levels.</div>
+<div class="item"><strong>Skills developed</strong>Language practice, comprehension, vocabulary, grammar and task completion.</div>
+<div class="item"><strong>Registration Required</strong>Teacher: Yes for management. Student access depends on the activity/assignment setup.</div>
+<div class="item"><strong>Limitations on Free Plans</strong>Limits may apply to storage, assignments or teacher features.</div>
+<div class="item"><strong>Interesting Feature</strong>Transforms traditional worksheets into interactive digital exercises.</div>
+</div>
+</section>
+
+<section id="snorkl" class="panel">
+<div class="tool-head"><h2>🟠 Snorkl</h2><span class="tool-tag">Show Your Thinking</span></div>
+<div class="grid">
+<div class="item"><strong>Platform / Operating System</strong>Web-based educational platform.</div>
+<div class="item"><strong>Supports collaboration</strong>Designed around teacher prompts and student responses, with opportunities to share thinking.</div>
+<div class="item"><strong>Teacher Friendly</strong>Useful for creating prompts and viewing student thinking without requiring complex setup.</div>
+<div class="item"><strong>Monitor student results</strong>Teachers can review student responses and gain insight into understanding.</div>
+<div class="item"><strong>Cost</strong>Access and available features depend on the current plan.</div>
+<div class="item"><strong>Target Group</strong>Broad educational use; particularly useful when teachers want students to explain their thinking.</div>
+<div class="item"><strong>Skills developed</strong>Reasoning, explanation, reflection, communication and metacognition.</div>
+<div class="item"><strong>Registration Required</strong>Teacher: Yes. Student access is normally connected to the teacher's activity/workflow.</div>
+<div class="item"><strong>Limitations on Free Plans</strong>Available activities/features may depend on the current plan.</div>
+<div class="item"><strong>Interesting Feature</strong>Students can show thinking through voice, drawing or text, giving teachers richer evidence of understanding.</div>
+</div>
+</section>
+
+<section id="wayground" class="panel">
+<div class="tool-head"><h2>🔴 Wayground</h2><span class="tool-tag">Instruction + Assessment</span></div>
+<div class="grid">
+<div class="item"><strong>Platform / Operating System</strong>Web-based educational platform with classroom participation options.</div>
+<div class="item"><strong>Supports collaboration</strong>Supports live and assigned activities, allowing different classroom formats.</div>
+<div class="item"><strong>Teacher Friendly</strong>Offers multiple resource and assessment formats within one platform.</div>
+<div class="item"><strong>Monitor student results</strong>Provides reports and performance information for teachers.</div>
+<div class="item"><strong>Cost</strong>Free access is available; premium features and limits depend on the plan.</div>
+<div class="item"><strong>Target Group</strong>School learners and broader educational contexts across levels.</div>
+<div class="item"><strong>Skills developed</strong>Knowledge recall, practice, comprehension and assessment skills.</div>
+<div class="item"><strong>Registration Required</strong>Teacher: Yes for creating/managing. Students can participate through teacher sessions/activities.</div>
+<div class="item"><strong>Limitations on Free Plans</strong>Some resource types, reports or advanced features may be plan-dependent.</div>
+<div class="item"><strong>Interesting Feature</strong>Combines instruction, interactive activities and assessment in one environment.</div>
+</div>
+</section>
+
+<section id="compare" class="panel">
+<div class="tool-head"><h2>📊 Comparative Chart</h2><span class="tool-tag">Same criteria for all 5 tools</span></div>
+<div class="compare">
+<table>
+<tr><th>Aspect</th><th>Wordwall</th><th>Kahoot!</th><th>Liveworksheets</th><th>Snorkl</th><th>Wayground</th></tr>
+<tr><td><b>Platform / OS</b></td><td>Web</td><td>Web + mobile participation</td><td>Web</td><td>Web</td><td>Web</td></tr>
+<tr><td><b>Collaboration</b></td><td>Live, individual, assignments</td><td>Strong live/team play</td><td>Mostly assigned practice</td><td>Teacher prompts + responses</td><td>Live + assigned</td></tr>
+<tr><td><b>Teacher Friendly</b></td><td>Templates & editing</td><td>Easy quiz/game workflow</td><td>Interactive worksheets</td><td>Simple prompts + insight</td><td>Many resource types</td></tr>
+<tr><td><b>Monitor Results</b></td><td>Assignments/results</td><td>Reports</td><td>Submissions/feedback</td><td>Student responses</td><td>Reports</td></tr>
+<tr><td><b>Cost</b></td><td>Free + paid plans</td><td>Free + paid plans</td><td>Free + paid plans</td><td>Plan-dependent</td><td>Free + paid plans</td></tr>
+<tr><td><b>Target Group</b></td><td>School/language learners</td><td>School/training</td><td>School/language</td><td>Broad educational use</td><td>School/education</td></tr>
+<tr><td><b>Skills</b></td><td>Vocabulary, recall, spelling</td><td>Recall, accuracy, fluency</td><td>Language practice</td><td>Reasoning & reflection</td><td>Practice & assessment</td></tr>
+<tr><td><b>Registration</b></td><td>Teacher account; students via access/assignment</td><td>Teacher account; students join sessions</td><td>Teacher account for management</td><td>Teacher account</td><td>Teacher account; students join activities</td></tr>
+<tr><td><b>Free Limitations</b></td><td>Templates/features vary</td><td>Features/session limits vary</td><td>Teacher features vary</td><td>Features vary</td><td>Advanced features vary</td></tr>
+<tr><td><b>Interesting Feature</b></td><td>Switch activity templates</td><td>Live game + feedback</td><td>Interactive worksheets</td><td>Voice/drawing/text thinking</td><td>Instruction + assessment</td></tr>
+</table>
+</div>
+</section>
+
+<section id="final" class="panel">
+<div class="final">
+<h2>⭐ Our Final Choice: Wordwall</h2>
+<p class="quote">“As an English teacher, I would choose Wordwall as the best option among Wordwall, Kahoot, Liveworksheets, Snorkl, and Wayground.”</p>
+<p>Wordwall is extremely versatile because it allows teachers to create more than 30 different activity types, such as quizzes, matching games, word searches, flashcards, and speaking activities using the same content. It also offers printable versions of activities, which is very useful when internet access is limited. In addition, teachers can easily modify or transform one activity into another format with a single click, saving valuable preparation time. The platform contains millions of ready-made resources that can be adapted to different English levels and skills. For EFL classrooms, Wordwall provides an excellent balance between engagement, flexibility, assessment, and ease of use.</p>
+<p><b>Thank you! — GROUP 7</b></p>
+</div>
+</section>
+
+<footer>EdTech Tools Review • Group 7 • Interactive presentation</footer>
+</div>
+<script>
+function show(id,btn){
+ document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ document.querySelectorAll('.controls button').forEach(x=>x.classList.remove('active'));
+ btn.classList.add('active');
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+document.addEventListener('keydown',e=>{
+ if(e.key==='f'||e.key==='F') document.documentElement.requestFullscreen();
+});
+</script>
+</body>
+</html>
